@@ -1,0 +1,320 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px; 
+    background-color: #000;
+    color:#fff;
+    overflow: hidden; /*we cannot scroll the extra contents of page down */
+}
+
+.main{
+display:flex;
+height:100vh;
+padding:.5rem
+
+}
+.sidebar{
+background-color: #000;
+width:308px;
+margin-right: 0.5rem;
+border-radius: 1rem;/*16px default size */
+}
+.main-content{
+background-color: #121212;
+border-radius: 1rem;
+flex:1;
+overflow:auto;
+padding: 0 1.5rem 0 1.5rem;
+}
+.music-player{
+background-color:#121212;
+position:fixed;
+bottom:0;
+width: 100%;
+height:72px;
+}
+
+.nav{
+background-color: #121212;
+border-radius: 1rem;
+height: 112px;
+display:flex;
+margin-bottom: 0.5rem;
+flex-direction: column;
+justify-content: center;
+padding:.5rem .75rem;
+}
+.nav-option{
+    line-height: 3 rem;
+    opacity: 0.7;
+    padding:0.5rem o.75rem;
+}
+.nav-option:hover{
+    opacity: 1;
+}
+.nav-option i,a{
+    color:white;
+    text-decoration: none;
+    padding:0.5rem 0rem;
+}
+.nav-option i{
+    font-size: 1.5rem;
+    padding-left:.5rem;
+}
+.nav-option a{
+    font-size: 1rem;
+    padding-left:1rem;
+}
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100vh;
+}
+.your-library{
+display:flex;
+justify-content:space-between;
+padding:.5rem .75rem;
+}
+
+.your-library img,a{
+    height: 1.25rem;
+    padding-left:.5rem;
+}
+.your-library img{
+    padding-right: .25rem;
+}
+.your-library .right i{
+    padding-right: .75rem;
+}
+
+.box{
+    background-color: #232323;
+    border-radius:1rem ;
+    height: 9rem;
+    margin:0.5rem 0.5rem 0.75rem 0.5rem;
+    padding:0.25rem 1rem;
+}
+.box .p1{
+font-size:1rem;
+font-weight: 500;
+margin:.75rem 0 .5rem 0;
+}
+.box .p2{
+    font-size: 0.85rem;
+    opacity: 0.75;
+    margin:.75rem 0 .5rem 0;
+}
+.badge{
+    background-color: white;
+    border:none;
+    border-radius: 100px;
+    padding:0.25rem 1rem;
+    font-weight: 700;
+    margin-top:0.5rem;
+    height:2rem;
+    width:fit-content;
+}
+
+.sticky-nav{
+    position: sticky;/* keeps nav bar sticked on top */
+    top:0;
+    display:flex;
+    justify-content: space-between;
+    background-color: #121212;
+    padding: 1rem 0 1rem 0;
+
+}
+.sticky-nav-icons{
+    margin-left:0.75rem;
+}
+.sticky-nav-icons img{
+    height: 1rem;
+    margin-top:0.75rem;
+}
+
+.sticky-nav-optoins{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item{
+    margin-right: 1rem;
+}
+.dark-badge{
+    background-color: black;
+    color: white;
+}
+.dark-badge i{
+   padding-right: 5px;
+}
+
+@media(max-width:1000px){
+    .hide{
+        display:none;
+    }
+}
+.card{
+   background-color: #232323;
+   width:145px;
+   border-radius:0.5rem; 
+   padding:1rem;
+   margin:.5rem .5rem 0 .5rem;
+   
+
+}
+.cards-container{
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+.card-image{
+    width:100%;
+    border-radius: 0.5rem;
+}
+
+.card-title{
+    font-weight: 600;
+
+}
+.card-info{
+     font-size:0.85rem;
+     opacity:0.8;
+}
+
+.footer{
+    height:300px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    width: 90%;
+    height:30%;
+    border-top: 1px solid white;
+    opacity:0.4;
+}
+.music-player{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.album{
+    width: 25%;
+    display:flex;
+    justify-content: space-around;
+  
+}
+.player{
+    width:50%;
+   
+}
+.controls{
+    width: 25%;
+   
+}
+.player-controls img{
+   height: 1rem;
+}
+.player-controls{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.player-control-icon{
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+.palyback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    width: 70%;
+    appearance:none;/*defalut properties and color of range input removed totally*/
+    background-color: transparent;
+    cursor:pointer; /* get hand pointer from default cursor */
+}
+/* https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html     : how to change range or any default style*/
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height:0.2rem;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height:1rem;
+    width: 1rem;
+    background-color: green;
+    border-radius: 50%;
+    margin-top:-6px;
+
+}
+.sub-controls{
+    display:flex;
+    
+   
+    justify-content: center;
+    align-items: center;
+}
+.sub-controls div{
+    background-color:#121212;
+    height: 2rem;
+    width: 2rem;
+}
+.sub-controls img{
+    height: 1.25rem;
+    width: 1.25rem;
+    color:white;
+    opacity:0.8;
+    padding:0.25rem;
+}
+.sub-controls img:hover{
+   opacity: 1;
+}
+.volume{
+    width: 30%;
+    appearance:none;/*defalut properties and color of range input removed totally*/
+    background-color: transparent;
+    cursor:pointer;
+}
+
+.volume::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height:0.2rem;
+}
+.volume::-webkit-slider-thumb{
+    appearance: none;
+    height:0.7rem;
+    width: 0.7rem;
+    background-color: green;
+    border-radius: 50%;
+    margin-top:-4px;
+
+}
+.album .singer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+width:4rem;
+}
+.album .plusIcon{
+  width:2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album .detail{
+    width:180px;
+    height: 72px;
+    padding: .5rem ;
+}
+
